@@ -20,7 +20,7 @@ all: build
 # Configures the project with CMake and compiles all targets.
 build:
 	@echo "--- Configuring and Building Project in '$(BUILD_DIR)' ---"
-	@cmake -B $(BUILD_DIR) -S . -DCMAKE_INSTALL_PREFIX=$(INSTALL_PREFIX)
+	@cmake -B $(BUILD_DIR) -S . -DCMAKE_INSTALL_PREFIX=$(INSTALL_PREFIX) -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	@cmake --build $(BUILD_DIR)
 
 # Runs the test suite using CTest. Depends on the 'build' target.
